@@ -43,6 +43,12 @@ namespace MacMenuBarPanel.MenuBarPanel
             Initialize();
         }
 		
+        // Call to load from a XIB/NIB file
+        public PanelController(string windowNibName) : base(windowNibName)
+        {
+            Initialize();
+        }
+
         // Call to load from the XIB/NIB file
         public PanelController() : base("Panel")
         {

@@ -56,8 +56,11 @@ namespace MacMenuBarPanel.MenuBarPanel
                 if (_panelController == value)
                     return;
 
-                _panelController.Dispose();
+                _panelController.ClosePanel();
+
                 _panelController = value;
+                _panelController.StatusItemView = _statusItemView;
+                _panelController.OpenPanel();
             }
         }
 
@@ -93,12 +96,14 @@ namespace MacMenuBarPanel.MenuBarPanel
 
             if (disposing)
             {
-                NSStatusBar.SystemStatusBar.RemoveStatusItem(_statusItem);
-                _statusItem.Dispose();
-                _panelController.Dispose();
+                // Clear managed resourced here
             }
 
-            // Clear unmanaged resources here (if applicable)
+            if (_statusItem != null)
+            {
+                NSStatusBar.SystemStatusBar.RemoveStatusItem(_statusItem);
+                _statusItem = null;
+            }
 
             _disposed = true;
         }
