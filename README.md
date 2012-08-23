@@ -3,6 +3,8 @@ MacMenuBarPanel
 
 MonoMac port of 'Panel' by Vadim Shpakovski: https://github.com/shpakovski/Popup
 
+Blog post for this repository: http://dan.clarke.name/2012/08/cocoa-popup-window-in-the-status-bar-monomac-port/
+
 License
 ===============
 
