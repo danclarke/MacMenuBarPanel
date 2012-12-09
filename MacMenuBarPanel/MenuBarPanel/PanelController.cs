@@ -143,7 +143,7 @@ namespace MacMenuBarPanel.MenuBarPanel
             if (panelRect.Right > (screenRect.Right - BackgroundView.ArrowHeight))
                 panelRect.X -= panelRect.Right - (screenRect.Right - BackgroundView.ArrowHeight);
 
-            NSApplication.SharedApplication.ActivateIgnoringOtherApps(false);
+            NSApplication.SharedApplication.ActivateIgnoringOtherApps(true);
             Window.AlphaValue = 0f;
             Window.SetFrame(statusRect, true);
             Window.MakeKeyAndOrderFront(this);
@@ -173,6 +173,7 @@ namespace MacMenuBarPanel.MenuBarPanel
 
             IsOpen = true;
             StatusItemView.IsHighlighted = true;
+            NSApplication.SharedApplication.ActivateIgnoringOtherApps(false);
         }
 
         /// <summary>
