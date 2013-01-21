@@ -13,51 +13,54 @@
     <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <DebugSymbols>true</DebugSymbols>
+    <DebugSymbols>True</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>False</Optimize>
     <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <IncludeMonoRuntime>False</IncludeMonoRuntime>
     <PlatformTarget>x86</PlatformTarget>
-    <EnablePackageSigning>false</EnablePackageSigning>
-    <ConsolePause>false</ConsolePause>
-    <EnableCodeSigning>false</EnableCodeSigning>
-    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>False</EnablePackageSigning>
+    <ConsolePause>False</ConsolePause>
+    <EnableCodeSigning>False</EnableCodeSigning>
+    <CreatePackage>False</CreatePackage>
     <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <UseSGen>False</UseSGen>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>none</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>True</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <IncludeMonoRuntime>False</IncludeMonoRuntime>
     <LinkMode>Full</LinkMode>
     <PlatformTarget>x86</PlatformTarget>
-    <EnablePackageSigning>false</EnablePackageSigning>
-    <ConsolePause>false</ConsolePause>
-    <EnableCodeSigning>false</EnableCodeSigning>
-    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>False</EnablePackageSigning>
+    <ConsolePause>False</ConsolePause>
+    <EnableCodeSigning>False</EnableCodeSigning>
+    <CreatePackage>False</CreatePackage>
     <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <UseSGen>False</UseSGen>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|x86' ">
     <DebugType>none</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>True</Optimize>
     <OutputPath>bin\x86\AppStore</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <IncludeMonoRuntime>True</IncludeMonoRuntime>
     <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
     <PlatformTarget>x86</PlatformTarget>
     <LinkMode>Full</LinkMode>
-    <EnableCodeSigning>true</EnableCodeSigning>
-    <ConsolePause>false</ConsolePause>
-    <EnablePackageSigning>true</EnablePackageSigning>
-    <CreatePackage>true</CreatePackage>
+    <EnableCodeSigning>True</EnableCodeSigning>
+    <ConsolePause>False</ConsolePause>
+    <EnablePackageSigning>True</EnablePackageSigning>
+    <CreatePackage>True</CreatePackage>
     <CodeSigningKey>3rd Party Mac Developer Application</CodeSigningKey>
+    <UseSGen>False</UseSGen>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -94,10 +97,13 @@
   <Import Project="$(MSBuildExtensionsPath)\Mono\MonoMac\v0.0\Mono.MonoMac.targets" />
   <ItemGroup>
     <Folder Include="MenuBarPanel\" />
-    <Folder Include="MenuBarPanel\Graphics\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MenuBarPanel\Graphics\Status.png" />
-    <Content Include="MenuBarPanel\Graphics\StatusHighlighted.png" />
+    <Content Include="Status.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="StatusHighlighted.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>
