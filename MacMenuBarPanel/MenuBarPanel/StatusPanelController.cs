@@ -100,10 +100,7 @@ namespace MacMenuBarPanel.MenuBarPanel
             }
 
             if (_statusItem != null)
-            {
                 NSStatusBar.SystemStatusBar.RemoveStatusItem(_statusItem);
-                _statusItem = null;
-            }
 
             _disposed = true;
         }

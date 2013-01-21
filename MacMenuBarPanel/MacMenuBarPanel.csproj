@@ -10,6 +10,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>MacMenuBarPanel</RootNamespace>
     <AssemblyName>MacMenuBarPanel</AssemblyName>
+    <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
